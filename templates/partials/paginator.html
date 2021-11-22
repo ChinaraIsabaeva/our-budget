@@ -1,0 +1,31 @@
+{% if is_paginated %}
+<ul class="pagination pagination-sm">
+    <li>
+        <a href="?page=1{% if request.GET.envelope %}&envelope={{ request.GET.envelope }}{% endif %}">
+            <i class="fa fa-fast-backward" aria-hidden="true"></i>
+        </a>
+    </li>
+
+    {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.envelope %}&envelope={{ request.GET.envelope }}{% endif %}">
+                <i class="fa fa-step-backward" aria-hidden="true"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page_obj.has_next %}
+        <li>
+            <a href="?page={{ page_obj.next_page_number }}{% if request.GET.envelope %}&envelope={{ request.GET.envelope }}{% endif %}">
+                <i class="fa fa-step-forward" aria-hidden="true"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    <li>
+        <a href="?page={{ paginator.num_pages }}{% if request.GET.envelope %}&envelope={{ request.GET.envelope }}{% endif %}">
+            <i class="fa fa-fast-forward" aria-hidden="true"></i>
+        </a>
+    </li>
+</ul>
+{% endif %}

@@ -12,7 +12,7 @@ class Envelopes(models.Model):
         max_digits=8,
         decimal_places=2
     )
-    closed = models.NullBooleanField(default=False)
+    closed = models.BooleanField(default=False)
     max_amount = models.DecimalField(
         max_digits=8,
         decimal_places=2,
@@ -23,7 +23,7 @@ class Envelopes(models.Model):
     class Meta:
         verbose_name = "конверт"
         verbose_name_plural = 'Конверты'
-        ordering = ['name', 'cash']
+        ordering = ('name', )
 
     def __str__(self):
         return '{}'.format(self.name)

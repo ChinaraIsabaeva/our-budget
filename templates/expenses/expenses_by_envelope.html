@@ -1,0 +1,44 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block title %}Финансовый кнут Варатаново-Исабаевых{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    {% include 'envelopes/select_envelope_form.html' %}
+
+    <div class="container-block">
+        <table class="data">
+            <h4 class="table_description">В конверте {{ envelope_name }}</h4>
+            <tr>
+                <td>Потрачено</td>
+                <td>{{ expenses_sum.total }}</td>
+            </tr>
+            <tr>
+                <td>Осталось</td>
+                <td>{{ envelope_sum }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Pасходы в конверте</h4>
+        <div class="container-block">
+            <table class="table">
+                <tr>
+                    <th>Расход</th>
+                    <th>Сумма</th>
+                </tr>
+                {% for expense in expenses %}
+                    <tr>
+                        <td>{{ expense.name }}</td>
+                        <td>{{ expense.amount }}</td>
+                        <td>{{ expense.created_date|date:"d M Y" }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
