@@ -1,7 +1,6 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
-{% get_current_language_bidi as LANGUAGE_BIDI %}
 
 {% load static %}
 
@@ -26,19 +25,19 @@
                   <li class="nav-item">
                     {% url 'home' as home %}
                     <a class="nav-link {% ifequal request.path home %}active{% endifequal %}" href="{{ home }}">
-                        <span class="text-uppercase">наш бюджет</span>
+                        <span class="text-uppercase">{% translate "Home" %}</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    {% url 'envelopes:all' as envelopes_all %}
-                    <a class="nav-link {% ifequal request.path envelopes_all %}active{% endifequal %}" href="{{ envelopes_all }}">
-                        <span class="text-uppercase">конверты</span>
+                    {% url 'spaces:spaces_all' as spaces_all %}
+                    <a class="nav-link {% ifequal request.path spaces_all %}active{% endifequal %}" href="{{ spaces_all }}">
+                        <span class="text-uppercase">{% translate "Spaces" %}</span>
                     </a>
                   </li>
                   <li class="nav-item">
-                    {% url 'expenses:regular_expenses' as regular_expenses %}
-                    <a class="nav-link {% ifequal request.path regular_expenses %}active{% endifequal %}" href="{{ regular_expenses }}">
-                        <span class="text-uppercase">постоянные расходы</span>
+                    {% url 'expenses:expenses_all' as expenses_all %}
+                    <a class="nav-link {% ifequal request.path regular_expenses %}active{% endifequal %}" href="{{ expenses_all }}">
+                        <span class="text-uppercase">{% translate "Expenses" %}</span>
                     </a>
                   </li>
                 </ul>

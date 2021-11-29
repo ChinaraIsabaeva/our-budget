@@ -1,28 +1,42 @@
 # -*- coding: utf-8 -*-
 
-from django.views.generic import ListView, CreateView, UpdateView
+
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse
 
-from expenses.forms import RegularExpensesForm
-from expenses.models import RegularMonthlyExpenses
+from core.views import CustomLoginRequiredMixin
+from expenses.forms import ExpensesForm
+from expenses.models import Expense
 
 
-class ExpenseUpdateView(UpdateView):
-    model = RegularMonthlyExpenses
+class ExpenseUpdateView(CustomLoginRequiredMixin, UpdateView):
+    model = Expense
     template_name = 'expenses/expense_update.html'
-    form_class = RegularExpensesForm
-
-
-class ExpenseCreateView(CreateView):
-    model = RegularMonthlyExpenses
-    form_class = RegularExpensesForm
+    form_class = ExpensesForm
 
     def get_success_url(self):
-        return reverse('expenses:all')
+        return reverse('expenses:expenses_all')
 
 
-class RegularExpenseListView(ListView):
-    template_name = 'expenses/regular_expenses.html'
-    model = RegularMonthlyExpenses
+class ExpenseCreateView(CustomLoginRequiredMixin, CreateView):
+    model = Expense
+    form_class = ExpensesForm
+    template_name = 'expenses/expense_create.html'
+
+    def get_success_url(self):
+        return reverse('expenses:expenses_all')
+
+
+class ExpenseDeleteView(CustomLoginRequiredMixin, DeleteView):
+    model = Expense
+    context_object_name = 'object'
+
+    def get_success_url(self):
+        return reverse('spaces:spaces_all')
+
+
+class ExpenseListView(CustomLoginRequiredMixin, ListView):
+    template_name = 'expenses/expenses.html'
+    model = Expense
     context_object_name = 'expenses'
 

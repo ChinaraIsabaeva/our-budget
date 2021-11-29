@@ -1,7 +1,7 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
-
-class Envelopes(models.Model):
+class Space(models.Model):
     name = models.CharField(max_length=255)
     current_amount = models.DecimalField(
         max_digits=8,
@@ -21,8 +21,8 @@ class Envelopes(models.Model):
     )
 
     class Meta:
-        verbose_name = "конверт"
-        verbose_name_plural = 'Конверты'
+        verbose_name = _('Space')
+        verbose_name_plural = _('Spaces')
         ordering = ('name', )
 
     def __str__(self):

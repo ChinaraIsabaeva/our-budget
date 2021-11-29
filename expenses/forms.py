@@ -1,25 +1,30 @@
-# -*- coding: utf-8 -*-
+from django.forms import ModelForm, TextInput, Select
+from django.utils.translation import gettext_lazy as _
 
-from django.forms import ModelForm, TextInput
-
-from expenses.models import RegularMonthlyExpenses
+from expenses.models import Expense
 
 
-class RegularExpensesForm(ModelForm):
+class ExpensesForm(ModelForm):
     class Meta:
-        model = RegularMonthlyExpenses
-        fields = ['name', 'amount']
+        model = Expense
+        fields = ['name', 'amount', 'frequency']
         widgets = {
             'name': TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Название'
+                    'placeholder': _('Name')
                 }
             ),
             'amount': TextInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Сумма'
+                    'placeholder': _('Amount')
+                }
+            ),
+            'frequency': Select(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': _('Frequency')
                 }
             )
         }

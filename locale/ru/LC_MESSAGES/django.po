@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 19:38+0000\n"
+"POT-Creation-Date: 2021-11-29 14:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,159 +16,147 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: expenses/forms.py:15 spaces/forms.py:29
 msgid "Name"
-msgstr "Name"
+msgstr "Название"
 
 #: expenses/forms.py:21 templates/expenses/expenses.html:27
 msgid "Amount"
-msgstr "Amount"
+msgstr "Сумма"
 
 #: expenses/forms.py:27
 msgid "Frequency"
-msgstr "Frequency"
+msgstr "Периодичность"
 
 #: expenses/models.py:24 templates/expenses/expenses.html:26
 msgid "Expense"
-msgstr "Expense"
+msgstr "Расход"
 
-#: expenses/models.py:25 templates/layout/base.html:40
+#: expenses/models.py:25 templates/layout/base.html:41
 msgid "Expenses"
-msgstr "Expenses"
+msgstr "Расходы"
 
 #: spaces/forms.py:35
 msgid "Monthly payment"
-msgstr "Monthly payment"
+msgstr "Месячное пополнение"
 
 #: spaces/forms.py:41
 msgid "Max space amount"
-msgstr "Max space amount"
+msgstr "Таксимальная сумма конверта"
 
 #: spaces/forms.py:48
 msgid "Closed"
-msgstr "Closed"
+msgstr "Закрыт"
 
 #: spaces/forms.py:53
 msgid "Missed required field"
-msgstr "Missed required field"
+msgstr "Проебал что-то заполнить"
 
 #: spaces/models.py:24 templates/home.html:15
 msgid "Space"
-msgstr "Space"
+msgstr "Конверт"
 
-#: spaces/models.py:25 templates/layout/base.html:34
+#: spaces/models.py:25 templates/layout/base.html:35
 msgid "Spaces"
-msgstr "Spaces"
+msgstr "Конверты"
 
 #: templates/expenses/expense_create.html:9 templates/expenses/expenses.html:12
-#, fuzzy
-#| msgid "Create expense"
 msgid "Create an expense"
-msgstr "Create expense"
+msgstr "Создать расход"
 
 #: templates/expenses/expense_form.html:16 templates/spaces/space_form.html:28
 msgid "Save"
-msgstr "Save"
+msgstr "Сохранить"
 
 #: templates/expenses/expense_update.html:10
-#, fuzzy
-#| msgid "Update Expense"
 msgid "Update the expense"
-msgstr "Update Expense"
+msgstr "Редактировать расход"
 
 #: templates/expenses/expenses.html:23
 #: templates/partials/aggregated_data.html:34
 msgid "All expenses"
-msgstr "All expenses"
+msgstr "Все расходы"
 
 #: templates/expenses/expenses.html:39 templates/spaces/spaces.html:40
 msgid "Delete"
-msgstr "Delete"
+msgstr "Удалить"
 
 #: templates/home.html:11
 msgid "Amount saved in spaces so far"
-msgstr "Amount saved in spaces so far"
+msgstr "Накопленная сумма в конвертах"
 
 #: templates/home.html:16
 msgid "Saved amount"
-msgstr "Saved amount"
+msgstr "Отложенная сумма"
 
-#: templates/layout/base.html:28
+#: templates/layout/base.html:29
 msgid "Home"
-msgstr "Home"
+msgstr "Наш бюджет"
 
 #: templates/login.html:7
 msgid "You need to create user"
-msgstr "You need to create user"
+msgstr "Вход только для своих"
 
 #: templates/login.html:9
 msgid "Check database for username or change password"
-msgstr "Check database for username or change password"
+msgstr "Иди проверь имя пользователья или поменял пароль"
 
 #: templates/login.html:22
 msgid "Login"
-msgstr "Login"
+msgstr "Вход"
 
 #: templates/partials/aggregated_data.html:5
 msgid "Income"
-msgstr "Income"
+msgstr "Доход"
 
 #: templates/partials/aggregated_data.html:12
 msgid "Free money"
-msgstr "Free money"
+msgstr "Нераспределенные деньги"
 
 #: templates/partials/aggregated_data.html:19
 msgid "Saved in spaces"
-msgstr "Saved in spaces"
+msgstr "Должно быть накопленно в конвертах"
 
 #: templates/partials/aggregated_data.html:26
 msgid "Monthly amount to save in spaces"
-msgstr "Monthly amount to save in spaces"
+msgstr "Сумма ежемесячного пополнения конвертов"
 
 #: templates/partials/confirm_delete.html:4
-#, python-format
-msgid "Are you sure you want to delete '%(object)s'?"
-msgstr ""
+msgid "Are you sure you want to delete '{{ object }}'?"
+msgstr "Точно хочешь удалить '{{ object }}'?"
 
 #: templates/partials/confirm_delete.html:6
 msgid "Confirm"
-msgstr "Confirm"
+msgstr "Удалить"
 
 #: templates/spaces/space_create.html:10
-#, fuzzy
-#| msgid "Create a spaces"
 msgid "Create a space"
-msgstr "Create a spaces"
+msgstr "Создать конверт"
 
 #: templates/spaces/space_update.html:9
-#, fuzzy
-#| msgid "Update space"
 msgid "Update the space"
-msgstr "Update space"
+msgstr "Редактировать конверт"
 
 #: templates/spaces/spaces.html:12
 msgid "Create a spaces"
-msgstr "Create a spaces"
+msgstr "Создать конверт"
 
 #: templates/spaces/spaces.html:23
-msgid "Monthly amount of spaces"
-msgstr "Monthly amount of spaces"
+msgid "Mothly amount of spaces"
+msgstr "Месячное пополнение конвертов"
 
 #: templates/spaces/spaces.html:26
 msgid "Space name"
-msgstr "Space name"
+msgstr "Название конверта"
 
 #: templates/spaces/spaces.html:27
 msgid "Monthly amount of space"
-msgstr "Monthly amount of space"
+msgstr "Месячное пополнение"
 
 #: templates/spaces/spaces.html:28
 msgid "Space closed"
-msgstr "Space closed"
-
-#~ msgid "Create Expense"
-#~ msgstr "Create Expense"
-
-#~ msgid "Create space"
-#~ msgstr "Create space"
+msgstr "Закрыт"

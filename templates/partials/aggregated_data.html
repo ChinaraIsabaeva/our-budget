@@ -1,37 +1,39 @@
-<div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <span >Доход</span>
-        </div>
-        <div class="col-md-4">
-            <span>{{ income }}</span>
-        </div>
+{% load i18n %}
 
-        <div class="col-md-8 text-center">
-            <span>Нераспределенные деньги</span>
-        </div>
-        <div class="col-md-4">
-            <span>{{ available_amount }}</span>
-        </div>
+<div class="row px-5 mx-5 justify-content-center">
+    <div class="col-md-6 text-center">
+        <span>{% translate "Income" %}</span>
+    </div>
+    <div class="col-md-3">
+        <span>{{ income }}</span>
+    </div>
 
-        <div class="col-md-8 text-center">
-            <span>Должно быть накопленно в конвертах</span>
-        </div>
-        <div class="col-md-4">
-            <span>{{ total_envelopes }}</span>
-        </div>
+    <div class="col-md-6 text-center">
+        <span>{% translate "Free money" %}</span>
+    </div>
+    <div class="col-md-3">
+        <span>{{ available_amount }}</span>
+    </div>
 
-        <div class="col-md-8 text-center">
-            <span>Сумма ежемесячного пополнения конвертов</span>
-        </div>
-        <div class="col-md-4">
-            <span>{{ total_envelopes_monthly }}</span>
-        </div>
+    <div class="col-md-6 text-center">
+        <span>{% translate "Saved in spaces" %}</span>
+    </div>
+    <div class="col-md-3">
+        <span>{{ total_spaces }}</span>
+    </div>
+
+    <div class="col-md-6 text-center">
+        <span>{% translate "Monthly amount to save in spaces" %}</span>
+    </div>
+    <div class="col-md-3">
+        <span>{{ total_spaces_monthly }}</span>
+    </div>
 
 
-        <div class="col-md-8 text-center">
-            <span>Сумма постоянных расходов</span>
-        </div>
-        <div class="col-md-4">
-            <span>{{ total_regular }}</span>
-        </div>
+    <div class="col-md-6 text-center">
+        <span>{% translate "All expenses" %}</span>
+    </div>
+    <div class="col-md-3">
+        <span>{{ total_regular }}</span>
+    </div>
 </div>

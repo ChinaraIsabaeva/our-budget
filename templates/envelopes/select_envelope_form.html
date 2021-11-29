@@ -1,9 +1,0 @@
-{% load static %}
-
-<form class="form-inline" action="{% url 'expenses:all' %}" method="get">
-    <div class="form-group">
-        {{ form.envelope }}
-        {{ form.envelope.errors }}
-    </div>
-    <button type="submit" class="btn btn-primary">Показать</button>
-</form>
