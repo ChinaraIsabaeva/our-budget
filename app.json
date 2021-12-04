@@ -2,7 +2,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test": "pytest"
+        "test": "python -m pytest"
       },
       "env": {
         "DJANGO_SETTINGS_MODULE": "core.settings.ci"
