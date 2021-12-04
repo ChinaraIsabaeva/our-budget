@@ -14,13 +14,13 @@ import os
 from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 def get_env_value(env_variable):
     env_var_value = os.environ.get(env_variable)
     if env_var_value is None:
-        error_msg = 'Set the {} environment variable'.format(env_variable)
+        error_msg = f"Set the {env_variable} environment variable"
         raise ImproperlyConfigured(error_msg)
     return env_var_value
 

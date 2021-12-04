@@ -13,4 +13,4 @@ class Income(models.Model):
         verbose_name_plural = _("Incomes")
 
     def __str__(self):
-        return '{}'.format(self.amount)
+        return f"{self.amount}"

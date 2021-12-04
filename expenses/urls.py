@@ -9,8 +9,8 @@ app_name = 'expenses'
 
 urlpatterns = [
     path(
-        'all/', views.ExpenseListView.as_view(),
-        name='expenses_all'
+        'create/', views.ExpenseCreateView.as_view(),
+        name='expense_create'
     ),
     path(
         '<int:pk>/update/',
@@ -18,12 +18,12 @@ urlpatterns = [
         name='expense_update'
     ),
     path(
-        'create/', views.ExpenseCreateView.as_view(),
-        name='expense_create'
-    ),
-    path(
         '<int:pk>/delete/',
         views.ExpenseDeleteView.as_view(),
         name='expense_delete'
+    ),
+    path(
+        'all/', views.ExpenseListView.as_view(),
+        name='expenses_all'
     )
 ]

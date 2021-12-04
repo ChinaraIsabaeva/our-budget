@@ -26,4 +26,4 @@ class Expense(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return '{name}'.format(name=self.name)
+        return f"{self.name}"

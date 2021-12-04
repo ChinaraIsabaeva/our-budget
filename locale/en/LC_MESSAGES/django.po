@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 19:38+0000\n"
+"POT-Creation-Date: 2021-11-30 20:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: expenses/forms.py:15 spaces/forms.py:29
+#: expenses/forms.py:15 spaces/forms.py:24
 msgid "Name"
 msgstr "Name"
 
 #: expenses/forms.py:21 templates/expenses/expenses.html:27
+#: templates/incomes/incomes.html:27
 msgid "Amount"
 msgstr "Amount"
 
@@ -37,27 +38,27 @@ msgstr "Expense"
 msgid "Expenses"
 msgstr "Expenses"
 
-#: spaces/forms.py:35
+#: spaces/forms.py:30
 msgid "Monthly payment"
 msgstr "Monthly payment"
 
-#: spaces/forms.py:41
+#: spaces/forms.py:36
 msgid "Max space amount"
 msgstr "Max space amount"
 
-#: spaces/forms.py:48
+#: spaces/forms.py:43
 msgid "Closed"
 msgstr "Closed"
 
-#: spaces/forms.py:53
+#: spaces/forms.py:48
 msgid "Missed required field"
 msgstr "Missed required field"
 
-#: spaces/models.py:24 templates/home.html:15
+#: spaces/models.py:25 templates/home.html:15
 msgid "Space"
 msgstr "Space"
 
-#: spaces/models.py:25 templates/layout/base.html:34
+#: spaces/models.py:26 templates/layout/base.html:34
 msgid "Spaces"
 msgstr "Spaces"
 
@@ -67,7 +68,8 @@ msgstr "Spaces"
 msgid "Create an expense"
 msgstr "Create expense"
 
-#: templates/expenses/expense_form.html:16 templates/spaces/space_form.html:28
+#: templates/expenses/expense_form.html:16
+#: templates/incomes/income_form.html:16 templates/spaces/space_form.html:28
 msgid "Save"
 msgstr "Save"
 
@@ -82,7 +84,8 @@ msgstr "Update Expense"
 msgid "All expenses"
 msgstr "All expenses"
 
-#: templates/expenses/expenses.html:39 templates/spaces/spaces.html:40
+#: templates/expenses/expenses.html:39 templates/incomes/incomes.html:39
+#: templates/spaces/spaces.html:40
 msgid "Delete"
 msgstr "Delete"
 
@@ -94,9 +97,29 @@ msgstr "Amount saved in spaces so far"
 msgid "Saved amount"
 msgstr "Saved amount"
 
+#: templates/incomes/income_create.html:9 templates/incomes/incomes.html:12
+msgid "Create an income"
+msgstr "Create an income"
+
+#: templates/incomes/income_update.html:10
+msgid "Update the income"
+msgstr "Update the income"
+
+#: templates/incomes/incomes.html:23
+msgid "All incomes"
+msgstr "All incomes"
+
+#: templates/incomes/incomes.html:26 templates/partials/aggregated_data.html:5
+msgid "Income"
+msgstr "Income"
+
 #: templates/layout/base.html:28
 msgid "Home"
 msgstr "Home"
+
+#: templates/layout/base.html:46
+msgid "Incomes"
+msgstr "Incomes"
 
 #: templates/login.html:7
 msgid "You need to create user"
@@ -109,10 +132,6 @@ msgstr "Check database for username or change password"
 #: templates/login.html:22
 msgid "Login"
 msgstr "Login"
-
-#: templates/partials/aggregated_data.html:5
-msgid "Income"
-msgstr "Income"
 
 #: templates/partials/aggregated_data.html:12
 msgid "Free money"
@@ -136,16 +155,12 @@ msgid "Confirm"
 msgstr "Confirm"
 
 #: templates/spaces/space_create.html:10
-#, fuzzy
-#| msgid "Create a spaces"
 msgid "Create a space"
-msgstr "Create a spaces"
+msgstr "Create a space"
 
 #: templates/spaces/space_update.html:9
-#, fuzzy
-#| msgid "Update space"
 msgid "Update the space"
-msgstr "Update space"
+msgstr "Update the space"
 
 #: templates/spaces/spaces.html:12
 msgid "Create a spaces"
@@ -166,9 +181,3 @@ msgstr "Monthly amount of space"
 #: templates/spaces/spaces.html:28
 msgid "Space closed"
 msgstr "Space closed"
-
-#~ msgid "Create Expense"
-#~ msgstr "Create Expense"
-
-#~ msgid "Create space"
-#~ msgstr "Create space"

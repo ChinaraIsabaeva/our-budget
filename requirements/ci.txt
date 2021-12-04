@@ -1,3 +1,7 @@
 factory-boy
 pytest
 pytest-django
+freezegun
+prospector
+pytest-cov
+bandit

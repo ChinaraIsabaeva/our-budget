@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 class Space(models.Model):
     name = models.CharField(max_length=255)
     current_amount = models.DecimalField(
@@ -26,8 +27,8 @@ class Space(models.Model):
         ordering = ('name', )
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return f"{self.name}"
 
     @property
     def get_absolute_url(self):
-        return '/{}/'.format(self.name)
+        return f"/{self.name}/"

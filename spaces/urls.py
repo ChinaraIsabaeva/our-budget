@@ -15,9 +15,9 @@ app_name = 'spaces'
 
 urlpatterns = [
     path(
-        'all/',
-        SpaceListView.as_view(),
-        name='spaces_all'
+        'create/',
+        SpaceCreateView.as_view(),
+        name='space_create'
     ),
     path(
         '<int:pk>/update/',
@@ -25,13 +25,13 @@ urlpatterns = [
         name='space_update'
     ),
     path(
-        'create/',
-        SpaceCreateView.as_view(),
-        name='space_create'
-    ),
-    path(
         '<int:pk>/delete/',
         SpaceDeleteView.as_view(),
         name='space_delete'
-    )
+    ),
+    path(
+        'all/',
+        SpaceListView.as_view(),
+        name='spaces_all'
+    ),
 ]

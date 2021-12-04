@@ -27,19 +27,19 @@ def get_aggregated_data(request):
     else:
         total_spaces_monthly = total_spaces_monthly['total']
 
-    sum_regular_expenses = Expense.objects.all().aggregate(
+    sum_expenses = Expense.objects.all().aggregate(
         total=Sum('amount')
     )
-    if sum_regular_expenses['total'] is None:
-        sum_regular_expenses = 0
+    if sum_expenses['total'] is None:
+        sum_expenses = 0
     else:
-        sum_regular_expenses = sum_regular_expenses['total']
+        sum_expenses = sum_expenses['total']
 
     context = {
         'available_amount': free_money,
         'income': income_total,
         'total_spaces': total_spaces,
         'total_spaces_monthly': total_spaces_monthly,
-        'total_regular': sum_regular_expenses
+        'total_expenses': sum_expenses
     }
     return context

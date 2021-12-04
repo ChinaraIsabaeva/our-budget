@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        {% include 'partials/aggregated_data.html' %}
+
+        <div class="row my-4 px-3">
+            <div class="col-md-6 offset-md-3">
+                <div class="col-md-8 offset-md-4">
+                    <a class="btn btn-primary" href="{% url 'income_create' %}">{% translate "Create an income" %}</a>
+                </div>
+            </div>
+        </div>
+
+        {% if message %}
+            <h4> {{ message }} </h4>
+        {% endif %}
+
+        <div class="row my-4 px-3 justify-content-center" id="all_expenses">
+            <div class="col-md-6 col-md-offset-3">
+                <h4 class="text-center">{% translate "All incomes" %}</h4>
+                <table class="table">
+                    <thead>
+                        <th>{% translate "Income" %}</th>
+                        <th>{% translate "Amount" %}</th>
+                    </thead>
+                    {% for income in incomes %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'income_update' income.id %}">
+                                    {{ income.name }}
+                                </a>
+                            </td>
+                            <td>{{ income.amount }}</td>
+                            <td>
+                                <a href="{% url 'income_delete' income.id %}">
+                                    {% translate "Delete" %}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

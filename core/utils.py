@@ -27,3 +27,12 @@ def available_amount():
         spaces_total = spaces['total']
     free_money = incomes_total - expenses_total - spaces_total
     return free_money
+
+
+def update_spaces():
+    spaces = Space.objects.all()
+    for space in spaces:
+        if not space.closed:
+            space.current_amount = space.current_amount \
+                                   + space.monthly_replenishment
+            space.save()

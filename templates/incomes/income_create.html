@@ -1,0 +1,16 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mg-top">
+            <div class="col-md-4 col-md-offset-4">
+                {% block header %}<h4 class="text-center">{% translate "Create an income" %}</h4>{% endblock header %}
+
+                {% include 'incomes/income_form.html' %}
+
+            </div>
+        </div>
+    </div>
+{%  endblock %}

@@ -1,12 +1,7 @@
-# -*- coding: utf-8 -*-
-
 from django.forms import (
-    Form,
     ModelForm,
     TextInput,
-    ModelChoiceField,
     CheckboxInput,
-    Select
 )
 from django.utils.translation import gettext_lazy as _
 
@@ -49,7 +44,7 @@ class SpacesForm(ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        super(SpacesForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         message = _('Missed required field')
         for field in self.fields:
             self.fields[field].error_messages['required'] = message

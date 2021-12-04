@@ -18,7 +18,13 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 
 from core.forms import LoginForm
-from core.views import HomeView
+from core.views import (
+    HomeView,
+    IncomeCreateView,
+    IncomeUpdateView,
+    IncomeDeleteView,
+    IncomeListView
+)
 
 
 urlpatterns = [
@@ -35,6 +41,28 @@ urlpatterns = [
         name='logout'
     ),
     path('', HomeView.as_view(), name='home'),
+
+    # income urls
+    path(
+        'incomes/create/',
+        IncomeCreateView.as_view(),
+        name='income_create'
+    ),
+    path(
+        'incomes/<int:pk>/update/',
+        IncomeUpdateView.as_view(),
+        name='income_update'
+    ),
+    path(
+        'incomes/<int:pk>/delete/',
+        IncomeDeleteView.as_view(),
+        name='income_delete'
+    ),
+    path(
+        'incomes/all/',
+        IncomeListView.as_view(),
+        name='incomes_all'
+    ),
 
     # app urls
     path(

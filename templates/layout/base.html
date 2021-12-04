@@ -40,6 +40,12 @@
                         <span class="text-uppercase">{% translate "Expenses" %}</span>
                     </a>
                   </li>
+                <li class="nav-item">
+                    {% url 'incomes_all' as incomes_all %}
+                    <a class="nav-link {% ifequal request.path regular_expenses %}active{% endifequal %}" href="{{ incomes_all }}">
+                        <span class="text-uppercase">{% translate "Incomes" %}</span>
+                    </a>
+                  </li>
                 </ul>
         </div>
     </header>
