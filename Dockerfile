@@ -9,5 +9,5 @@ RUN apt-get update && apt-get -y install \
     postgresql-client
 RUN pip install --upgrade pip
 COPY requirements /webapp/src/requirements/
-RUN pip install --user -r requirements/dev.txt -r requirements/ci.txt
+RUN pip install --user -r requirements/dev.txt -r requirements/requirements-test.txt
 COPY . /webapp/src

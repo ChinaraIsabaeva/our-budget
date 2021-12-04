@@ -1,0 +1,12 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "pytest"
+      },
+      "env": {
+        "DJANGO_SETTINGS_MODULE": "core.settings.ci"
+      }
+    }
+  }
+}
