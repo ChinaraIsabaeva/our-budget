@@ -27,7 +27,7 @@ docker-compose exec web python /webapp/src/manage.py create_initial_data
 ```
 
 
-### Run test
+### Run tests
 
 ```
 docker-compose exec web python -m pytest
